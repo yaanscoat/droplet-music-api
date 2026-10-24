@@ -1,36 +1,18 @@
-<div align="center">
-
 <img src="public/assets/logo.svg" width="112" alt="Droplet logo">
+<h1 align="center">Droplet</h1>
 
-# Droplet
+A self-hosted music player that looks sick asf.
 
-**A self-hosted music player that looks like it costs money and doesn't.**
-
-Search with **Tidal** and **Monochrome** · Play from **YouTube Music** and **SoundCloud** · Wrapped in **liquid glass**
 
 ![Node](https://img.shields.io/badge/node-%E2%89%A522-7b61ff?style=flat-square&logo=node.js&logoColor=white)
 ![Fastify](https://img.shields.io/badge/fastify-5-ff6aa2?style=flat-square&logo=fastify&logoColor=white)
 ![No build step](https://img.shields.io/badge/build%20step-none%20lol-22c7ff?style=flat-square)
 ![License](https://img.shields.io/badge/license-AGPL--3.0-white?style=flat-square)
 
-</div>
-
 ---
 
 > [!NOTE]
 > Droplet is a fork-in-spirit of [x8rr/music](https://github.com/x8rr/music). Same idea (Tidal catalog, YouTube audio), rebuilt in plain JavaScript with a shinier coat of paint.
-
-## 🫧 What's in the box
-
-| | |
-|---|---|
-| 🔎 **Search that doesn't give up** | Tries Tidal → Monochrome → YouTube Music, in that order, until someone answers. |
-| 🎧 **Playback that finds a way** | Tidal tracks get matched to the best YouTube Music upload by title, artist and length. No luck? SoundCloud gets a shot. |
-| ❤️ **Likes** | Heart anything. It lands in *Liked songs* and stays there (on your server, not ours: we don't have one). |
-| ⬇️ **Downloads** | One click, properly named `Artist - Title.m4a`. Your ears, your files. |
-| 🪟 **Liquid glass UI** | Real edge refraction (Chromium), frosted blur everywhere else, a background that steals colours from the album art, and a visualizer that makes the cover breathe with the kick drum. |
-| 📱 **Phone friendly** | Floating tab bar, mini player, the works. |
-| ⌨️ **Keyboard shortcuts** | Because the mouse is optional. |
 
 ## 🚀 Quick start
 
@@ -205,5 +187,6 @@ Droplet is for personal use. Only download what you have the rights to, support 
 <div align="center">
 <sub>Made with 💧 and too many late-night listening sessions.</sub>
 </div>
-#   m u s i c - a p i  
+#   m u s i c - a p i 
+ 
  
