@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="d-body" x1="14" y1="8" x2="52" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6aa2"/>
+      <stop offset="0.5" stop-color="#9b6bff"/>
+      <stop offset="1" stop-color="#3fd8ff"/>
+    </linearGradient>
+    <radialGradient id="d-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(26 30) rotate(60) scale(30 24)">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="d-rim" x1="12" y1="6" x2="52" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <!-- the droplet -->
+  <path d="M32 4.5c0 0-19 20.6-19 35.1a19 19 0 0 0 38 0C51 25.1 32 4.5 32 4.5z" fill="url(#d-body)"/>
+  <path d="M32 4.5c0 0-19 20.6-19 35.1a19 19 0 0 0 38 0C51 25.1 32 4.5 32 4.5z" fill="url(#d-glow)"/>
+  <path d="M32 5.6c0 0-18.2 19.9-18.2 34a18.2 18.2 0 0 0 36.4 0c0-14.1-18.2-34-18.2-34z" stroke="url(#d-rim)" stroke-width="1.4"/>
+  <!-- sound wave inside -->
+  <g stroke="#fff" stroke-width="3.4" stroke-linecap="round">
+    <path d="M22.5 39v3"/>
+    <path d="M27.5 34.5v12"/>
+    <path d="M32.5 30v21"/>
+    <path d="M37.5 35v11"/>
+    <path d="M42.5 38.5v4"/>
+  </g>
+  <!-- specular highlight -->
+  <path d="M21.8 30.5c1.6-5 5-10.4 8.2-14.6" stroke="#fff" stroke-opacity=".75" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="20.6" cy="35.2" r="1.5" fill="#fff" fill-opacity=".7"/>
+</svg>

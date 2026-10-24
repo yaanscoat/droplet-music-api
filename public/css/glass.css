@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Liquid glass
+   Layers, bottom to top:
+     1. backdrop-filter: blur + saturation (+ edge refraction on Chromium, see js/glass.js)
+     2. a faint tint so text stays readable over bright art
+     3. ::before: a gradient rim that catches light on the top-left and bottom-right
+     4. ::after:  a soft specular glare that follows your pointer (--mx / --my)
+   ========================================================================== */
+
+.lg,
+.lg-lite {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.035) 45%, rgba(255, 255, 255, 0.06) 100%),
+    var(--glass-tint);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(185%) brightness(1.05);
+  backdrop-filter: blur(var(--glass-blur)) saturate(185%) brightness(1.05);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Chromium gets real refraction: js/glass.js sets --lg-filter to url(#lg-…) on [data-refract] panels.
+   The refraction does the "glassy" work, so these panels need less blur to look rich. */
+.lg-refract [data-refract] {
+  -webkit-backdrop-filter: var(--lg-filter, blur(0)) blur(calc(var(--glass-blur) * 0.5)) saturate(190%) brightness(1.06);
+  backdrop-filter: var(--lg-filter, blur(0)) blur(calc(var(--glass-blur) * 0.5)) saturate(190%) brightness(1.06);
+}
+
+/* rim light */
+.lg::before,
+.lg-lite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--glass-shine) 0%,
+    rgba(255, 255, 255, 0.12) 22%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.1) 78%,
+    rgba(255, 255, 255, 0.38) 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* pointer-following glare */
+.lg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--mx, 30%) var(--my, -40%),
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.03) 35%,
+    transparent 60%
+  );
+  opacity: var(--glare, 0.6);
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+  z-index: 1;
+}
+.lg:hover::after { --glare: 1; }
+
+/* Content inside glass sits above the glare layers. :where() keeps this at zero specificity
+   so anything that wants position: absolute (dropdowns, indicators) still gets it. */
+:where(.lg, .lg-lite) > * { position: relative; z-index: 3; }
+
+/* Small glass chips/buttons: cheaper, no refraction, no glare. */
+.lg-lite { --glass-blur: 14px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 6px 20px -8px rgba(0, 0, 0, 0.5); }
+
+.glass-defs { position: absolute; width: 0; height: 0; pointer-events: none; }
+
+/* Browsers without backdrop-filter get frosted ink instead of see-through glass. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .lg, .lg-lite { background: rgba(22, 19, 32, 0.92); }
+}

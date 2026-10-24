@@ -1,0 +1,21 @@
+{
+  "name": "music-api",
+  "version": "0.1.0",
+  "description": "Droplet: a self-hosted music API and liquid-glass web player. Tidal & Monochrome search, YouTube Music & SoundCloud playback.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "setup": "node scripts/install-yt-dlp.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@fastify/static": "10.1.7",
+    "fastify": "5.12.7",
+    "ytmusic-api": "5.3.1"
+  }
+}

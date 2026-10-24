@@ -1,0 +1,54 @@
+﻿
+> music-api@0.1.0 dev
+> node --watch --env-file-if-exists=.env src/server.js
+
+node.exe : .env not found. Continuing without it.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (.env not found. Continuing without it.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+Open http://localhost:2010
+Change detected in 'C:\\Users\\yaans\\Documents\\music-api\\src\\providers\\search\\index.js'
+Restarting 'src/server.js'
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+Open http://localhost:2010
+{"level":50,"time":1792879442978,"pid":7712,"hostname":"yaans-pc","reqId":"req-t","err":{"type":"Error","message":"No playable SoundCloud stream for this track","stack":"Error: No playable SoundCloud stream for this track\n    at file:///C:/Users/yaans/Documents/music-api/src/providers/playback/soundcloud.js:134:21\n    at async file:///C:/Users/yaans/Documents/music-api/src/lib/cache.js:37:30\n    at async serve (file:///C:/Users/yaans/Documents/music-api/src/routes/stream.js:99:18)"},"msg":"No playable SoundCloud stream for this track"}
+{"level":50,"time":1792879444186,"pid":7712,"hostname":"yaans-pc","reqId":"req-u","err":{"type":"Error","message":"No playable SoundCloud stream for this track","stack":"Error: No playable SoundCloud stream for this track\n    at file:///C:/Users/yaans/Documents/music-api/src/providers/playback/soundcloud.js:134:21\n    at async file:///C:/Users/yaans/Documents/music-api/src/lib/cache.js:37:30\n    at async serve (file:///C:/Users/yaans/Documents/music-api/src/routes/stream.js:99:18)"},"msg":"No playable SoundCloud stream for this track"}
+{"level":50,"time":1792879445392,"pid":7712,"hostname":"yaans-pc","reqId":"req-v","err":{"type":"Error","message":"No playable SoundCloud stream for this track","stack":"Error: No playable SoundCloud stream for this track\n    at file:///C:/Users/yaans/Documents/music-api/src/providers/playback/soundcloud.js:134:21\n    at async file:///C:/Users/yaans/Documents/music-api/src/lib/cache.js:37:30\n    at async serve (file:///C:/Users/yaans/Documents/music-api/src/routes/stream.js:99:18)"},"msg":"No playable SoundCloud stream for this track"}
+Change detected in 'C:\\Users\\yaans\\Documents\\music-api\\src\\providers\\playback\\soundcloud.js'
+Restarting 'src/server.js'
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+Open http://localhost:2010
+Change detected in 'C:\\Users\\yaans\\Documents\\music-api\\src\\providers\\playback\\soundcloud.js'
+Restarting 'src/server.js'
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+Open http://localhost:2010
+Change detected in 'C:\\Users\\yaans\\Documents\\music-api\\src\\providers\\search\\index.js'
+Restarting 'src/server.js'
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+Open http://localhost:2010
+Change detected in 'C:\\Users\\yaans\\Documents\\music-api\\src\\server.js'
+Restarting 'src/server.js'
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+Open http://localhost:2010
+Change detected in 'C:\\Users\\yaans\\Documents\\music-api\\src\\server.js'
+Restarting 'src/server.js'
+.env not found. Continuing without it.
+Search:   tidal → monochrome → ytmusic
+Playback: ytmusic → soundcloud
+💧 Droplet is up → http://localhost:2010
