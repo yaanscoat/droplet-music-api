@@ -1,6 +1,6 @@
-<h1 align="center">music-api</h1>
+<h1 align="center">droplet music-api</h1>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/yaanscoat/music-api/refs/heads/main/public/assets/logo.svg" alt="Alt Text" width="500">
+    <img src="https://raw.githubusercontent.com/yaanscoat/music-api/refs/heads/main/public/assets/logo.svg" alt="Alt Text" width="200">
 </p>
 
 <p align="center">
