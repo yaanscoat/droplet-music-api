@@ -1,5 +1,8 @@
 <h1 align="center">music-api</h1>
-<img src="https://example.com" alt="Alt Text" width="500">
+<p align="center">
+    <img src="https://raw.githubusercontent.com/yaanscoat/music-api/refs/heads/main/public/assets/logo.svg" alt="Alt Text" width="500">
+</p>
+
 <p align="center">
     A self-hosted music api that runs quite smoothly.
 </p>
