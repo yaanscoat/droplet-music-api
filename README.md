@@ -1,5 +1,5 @@
 <h1 align="center">music-api</h1>
-
+<img src="https://example.com" alt="Alt Text" width="500">
 <p align="center">
     A self-hosted music api that runs quite smoothly.
 </p>
