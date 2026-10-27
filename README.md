@@ -37,4 +37,3 @@ And the open `https://localhost:2010` and you're done!
 
 * [yaanscoat](https://github.com/yaanscoat) - Creator
 * [x8rr](https://github.com/x8rr) - API Inspiration
-* beery-tomato - Manager
